@@ -1,10 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { LayoutGrid, List, Search, Plus, Github, Music, Tag as TagIcon, EyeOff, Eye } from 'lucide-react';
+import { LayoutGrid, List, Search, Plus, Github, Tag as TagIcon, EyeOff, Eye } from 'lucide-react';
 import { initialSites, allTags } from './data';
 import { SiteCard } from './components/SiteCard';
 import { SiteRow } from './components/SiteRow';
 import { SubmitModal } from './components/SubmitModal';
 import { ViewMode } from './types';
+import monologo from './monologo.svg';
 
 export default function App() {
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
@@ -57,7 +58,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
-              <Music className="w-6 h-6 text-zinc-950" />
+              <img src={monologo} alt="" aria-hidden="true" className="w-6 h-6" />
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight text-zinc-100">
@@ -226,7 +227,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-zinc-800 rounded-lg flex items-center justify-center">
-              <Music className="w-4 h-4 text-emerald-500" />
+              <img src={monologo} alt="" aria-hidden="true" className="w-4 h-4 invert" />
             </div>
             <span className="text-zinc-400 font-medium">MIDIWeb Hub</span>
           </div>
