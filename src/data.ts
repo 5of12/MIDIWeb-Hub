@@ -77,6 +77,13 @@ export const initialSites: Site[] = [
     url: 'https://synth.playtronica.com',
     tags: ['synth', 'webaudio', 'collection'],
     description: 'A curated collection of web-based synthesizers by Playtronica.',
+  },
+  {
+    id: 'piano-projector',
+    name: 'Piano Projector',
+    url: 'https://pianoprojector.app',
+    tags: ['keyboard'],
+    description: 'A versatile and easy-to-use on-screen virtual piano keyboard.',
   }
 ];
 
