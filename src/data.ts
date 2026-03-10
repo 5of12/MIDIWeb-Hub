@@ -23,6 +23,13 @@ export const initialSites: Site[] = [
     description: 'A tool to monitor and analyze incoming MIDI messages in real-time.',
   },
   {
+    id: 'midi-surf',
+    name: 'MIDI Surf',
+    url: 'https://midisurf.app',
+    tags: ['controller', 'drum', 'performance'],
+    description: 'A flexible and powerful MIDI controller anywhere you have a browser!.',
+  },  
+  {
     id: 'retrokits',
     name: 'RetroKits - Small, Smart Music Tools',
     url: 'https://retrokits.com',
