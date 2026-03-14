@@ -93,7 +93,7 @@ export const initialSites: Site[] = [
     description: 'A versatile and easy-to-use on-screen virtual piano keyboard.',
   },
   {
-  "id": "Sight-Reading-Training",
+  "id": "sr-training",
   "name": "Sight Reading Training",
   "url": "https://sightreading.training/",
   "tags": ["training","piano", "webaudio"],
