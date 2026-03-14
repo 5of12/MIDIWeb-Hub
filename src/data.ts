@@ -91,7 +91,14 @@ export const initialSites: Site[] = [
     url: 'https://pianoprojector.app',
     tags: ['keyboard'],
     description: 'A versatile and easy-to-use on-screen virtual piano keyboard.',
-  }
+  },
+  {
+  "id": "Sight-Reading-Training",
+  "name": "Sight Reading Training",
+  "url": "https://sightreading.training/",
+  "tags": ["training","piano", "webaudio"],
+  "description": "a free way to practice sight reading by playing randomly generated sheet music"
+}
 ];
 
 export const allTags = Array.from(
