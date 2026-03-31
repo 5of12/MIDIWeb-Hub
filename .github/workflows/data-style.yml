@@ -1,0 +1,41 @@
+name: Validate data style
+
+on:
+  pull_request:
+    paths:
+      - 'src/data.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/data-style.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/data.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/data-style.yml'
+
+jobs:
+  check-data-style:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check src/data.ts formatting
+        run: |
+          npm run check:data || {
+            echo "::error title=src/data.ts formatting::Run 'npm run format:data', commit the updated src/data.ts, and push again."
+            exit 1
+          }

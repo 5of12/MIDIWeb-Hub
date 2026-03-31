@@ -6,7 +6,8 @@ export const initialSites: Site[] = [
     name: 'microtonal',
     url: 'https://www.websynths.com/microtonal/',
     tags: ['synth', 'microtonal', 'keyboard'],
-    description: 'A microtonal web synthesizer with advanced tuning capabilities.',
+    description:
+      'A microtonal web synthesizer with advanced tuning capabilities.',
   },
   {
     id: 'midi-city',
@@ -20,28 +21,32 @@ export const initialSites: Site[] = [
     name: 'MIDI Monitor',
     url: 'https://www.midimonitor.com',
     tags: ['utility', 'sysex', 'monitor'],
-    description: 'A tool to monitor and analyze incoming MIDI messages in real-time.',
+    description:
+      'A tool to monitor and analyze incoming MIDI messages in real-time.',
   },
   {
     id: 'midi-surf',
     name: 'MIDI Surf',
     url: 'https://midisurf.app',
     tags: ['controller', 'drum', 'performance'],
-    description: 'A flexible and powerful MIDI controller anywhere you have a browser!.',
-  },  
+    description:
+      'A flexible and powerful MIDI controller anywhere you have a browser!.',
+  },
   {
     id: 'retrokits',
     name: 'RetroKits - Small, Smart Music Tools',
     url: 'https://retrokits.com',
     tags: ['hardware', 'sysex', 'utility', 'company'],
-    description: 'Small, Smart Music Tools with great MIDI hardware utility solutions.',
-  },  
+    description:
+      'Small, Smart Music Tools with great MIDI hardware utility solutions.',
+  },
   {
     id: 'ryoturia',
     name: 'ryoturia - ThreeJS Synth',
     url: 'https://ryoturia.netlify.app/',
     tags: ['synth', 'webaudio', '3d'],
-    description: 'An experimental 3D synthesizer built with Three.js and Web Audio API.',
+    description:
+      'An experimental 3D synthesizer built with Three.js and Web Audio API.',
   },
   {
     id: 'sound-fonts',
@@ -69,31 +74,35 @@ export const initialSites: Site[] = [
     name: 'Tone.js Demos',
     url: 'https://tonejs.github.io/demos',
     tags: ['webaudio', 'synth', 'drums', 'library'],
-    description: 'Interactive demonstrations of the Tone.js Web Audio framework.',
+    description:
+      'Interactive demonstrations of the Tone.js Web Audio framework.',
   },
   {
     id: 'webmidijs',
     name: 'WebMidi.js',
     url: 'https://webmidijs.org',
     tags: ['utility', 'library', 'api'],
-    description: 'A JavaScript library that makes the Web MIDI API easier to use.',
+    description:
+      'A JavaScript library that makes the Web MIDI API easier to use.',
   },
   {
     id: 'playtronica',
     name: 'Web Synths Collection',
     url: 'https://synth.playtronica.com',
     tags: ['synth', 'webaudio', 'collection'],
-    description: 'A curated collection of web-based synthesizers by Playtronica.',
+    description:
+      'A curated collection of web-based synthesizers by Playtronica.',
   },
   {
     id: 'piano-projector',
     name: 'Piano Projector',
     url: 'https://pianoprojector.app',
     tags: ['keyboard'],
-    description: 'A versatile and easy-to-use on-screen virtual piano keyboard.',
-  }
+    description:
+      'A versatile and easy-to-use on-screen virtual piano keyboard.',
+  },
 ];
 
 export const allTags = Array.from(
-  new Set(initialSites.flatMap((site) => site.tags))
+  new Set(initialSites.flatMap((site) => site.tags)),
 ).sort();
