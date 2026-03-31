@@ -56,6 +56,13 @@ export const initialSites: Site[] = [
     description: 'A web-based soundfont player and synthesizer.',
   },
   {
+    id: 'soundmondo',
+    name: 'Soundmondo',
+    url: 'https://soundmondo.yamahasynth.com/',
+    tags: ['hardware', 'sysex', 'utility', 'company'],
+    description: 'Soundmondo is a social sound-sharing community for creating, sharing and exploring synthesizer sounds.',
+  },
+  {
     id: 'studio-code',
     name: 'Studio Code Utilities',
     url: 'https://studiocode.dev/utilities/',
