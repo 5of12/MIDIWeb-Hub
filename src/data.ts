@@ -2,6 +2,13 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'hexatone',
+    name: 'PLAINSOUND HEXATONE',
+    url: 'https://hexatone.plainsound.org',
+    tags: ['synth', 'webaudio', 'webmidi', 'lumatone', 'isomorphic keyboard'],
+    description: 'A microtonal app for mapping keyboards and 2D controllers to custom tunings.'
+  },
+  {
     id: 'microtonal',
     name: 'microtonal',
     url: 'https://www.websynths.com/microtonal/',
