@@ -36,6 +36,13 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
+
+      - name: Check src/data.ts formatting
+        run: |
+          npm run check:data || {
+            echo "::error title=src/data.ts formatting::Run 'npm run format:data', commit the updated src/data.ts, and push again."
+            exit 1
+          }
         
       - name: Build
         run: npm run build
