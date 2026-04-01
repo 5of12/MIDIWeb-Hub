@@ -64,6 +64,14 @@ export const initialSites: Site[] = [
     description: 'A web-based soundfont player and synthesizer.',
   },
   {
+    id: 'sr-training',
+    name: 'Sight Reading Training',
+    url: 'https://sightreading.training/',
+    tags: ['training', 'piano', 'webaudio'],
+    description:
+      'a free way to practice sight reading by playing randomly generated sheet music',
+  },
+  {
     id: 'soundmondo',
     name: 'Soundmondo',
     url: 'https://soundmondo.yamahasynth.com/',
