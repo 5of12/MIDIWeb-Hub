@@ -125,6 +125,14 @@ export const initialSites: Site[] = [
     description:
       'A versatile and easy-to-use on-screen virtual piano keyboard.',
   },
+    {
+    id: 'piano-trainer-studio',
+    name: 'Piano Trainer Studio',
+    url: 'https://pianotrainerstudio.com',
+    tags: ['training', 'piano', 'midi', 'playback', 'webaudio'],
+    description:
+      'Interactive piano practice app with sheet music playback, MIDI input, and training modes for learning songs.',
+  },
 ];
 
 export const allTags = Array.from(
