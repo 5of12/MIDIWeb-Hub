@@ -133,6 +133,17 @@ export const initialSites: Site[] = [
     description:
       'Interactive piano practice app with sheet music playback, MIDI input, and training modes for learning songs.',
   },
+{
+    id: 'piano-ml',
+    name: 'PianoML',
+    url: 'https://pianoml.org',
+    tags: ['piano', 'score', 'practice', 'library', 'omr', 'scales', 'sight-reading', 'open-source'],
+    description:
+      'A free, open-source web app to learn and practice piano with smart sheet music. Features a large and growing (12k+) personal music library enriched via MusicBrainz thesaurus and music21 musicological analysis (grade, tonality, composer, genre, hands, etc.). Offers interactive practice tools including looping, hand separation, real-time note correction, generated scales with instant MIDI feedback, and more. Supports MusicXML, MIDI, and PDF imports (with OMR).',
+  }
+
+
+
 ];
 
 export const allTags = Array.from(
