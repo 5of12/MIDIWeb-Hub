@@ -2,10 +2,17 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'mia',
+    name: 'MIA',
+    url: 'https://iammia.tiiny.site/MIA.html',
+    tags: ['practice', 'chord', 'training', 'piano', 'guitar'],
+    description: 'Musical Instrument Assistant - Responsive Music Workspace',
+  },
+  {
     id: 'hexatone',
     name: 'PLAINSOUND HEXATONE',
     url: 'https://hexatone.plainsound.org',
-    tags: ['synth', 'webaudio', 'webmidi', 'lumatone', 'isomorphic keyboard'],
+    tags: ['synth', 'webaudio', 'lumatone', 'isomorphic keyboard'],
     description:
       'A microtonal app for mapping keyboards and 2D controllers to custom tunings.',
   },
