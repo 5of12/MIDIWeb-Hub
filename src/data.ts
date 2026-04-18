@@ -2,6 +2,13 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'sightread',
+    name: 'SIGHTREAD',
+    url: 'https://sightread.dev/',
+    tags: ['sightread', 'chord', 'training', 'piano', 'record'],
+    description: 'Plug in your keyboard and learn, right in your browser',
+  },
+  {
     id: 'mia',
     name: 'MIA',
     url: 'https://iammia.tiiny.site/MIA.html',
