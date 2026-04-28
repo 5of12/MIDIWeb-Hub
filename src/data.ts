@@ -164,6 +164,13 @@ export const initialSites: Site[] = [
     description:
       'A free, open-source web app to learn and practice piano with smart sheet music. Features a large and growing (12k+) personal music library enriched via MusicBrainz thesaurus and music21 musicological analysis (grade, tonality, composer, genre, hands, etc.). Offers interactive practice tools including looping, hand separation, real-time note correction, generated scales with instant MIDI feedback, and more. Supports MusicXML, MIDI, and PDF imports (with OMR).',
   },
+  {
+    id: 'play-drums-online',
+    name: 'PlayDrumsOnline',
+    url: 'https://www.playdrumsonline.com',
+    tags: ['drum', 'midi', 'training', 'practice', 'sheet-music', 'transcription', 'sequencer'],
+    description: 'Practice drums in the browser with 2000+ songs as drum sheet or rhythm game. AI-generated transcription from MP3/YouTube, MIDI input from electronic kits, real-time scoring, sheet editor, and PDF/MIDI export.'
+  },
 ];
 
 export const allTags = Array.from(
