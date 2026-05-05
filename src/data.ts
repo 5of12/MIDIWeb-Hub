@@ -164,6 +164,13 @@ export const initialSites: Site[] = [
     description:
       'A free, open-source web app to learn and practice piano with smart sheet music. Features a large and growing (12k+) personal music library enriched via MusicBrainz thesaurus and music21 musicological analysis (grade, tonality, composer, genre, hands, etc.). Offers interactive practice tools including looping, hand separation, real-time note correction, generated scales with instant MIDI feedback, and more. Supports MusicXML, MIDI, and PDF imports (with OMR).',
   },
+  {
+    id: 'chordboard',
+    name: 'Chordboard',
+    url: 'https://simoncoudeville.github.io/chordboard/',
+    tags: ['chords', 'scales', 'midi', 'usb', 'keyboard'],
+    description: 'Chordboard is a web-based chord pad app. Build and assign custom chords to a pad and play external gear over USB.'
+  }
 ];
 
 export const allTags = Array.from(
