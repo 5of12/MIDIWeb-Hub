@@ -19,7 +19,7 @@ export const initialSites: Site[] = [
     id: 'hexatone',
     name: 'PLAINSOUND HEXATONE',
     url: 'https://hexatone.plainsound.org',
-    tags: ['synth', 'webaudio', 'lumatone', 'isomorphic keyboard'],
+    tags: ['synth', 'webaudio', 'lumatone', 'isomorphic', 'keyboard'],
     description:
       'A microtonal app for mapping keyboards and 2D controllers to custom tunings.',
   },
