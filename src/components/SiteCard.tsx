@@ -36,11 +36,18 @@ export function SiteCard({ site, status }: SiteCardProps) {
           </div>
         </div>
         
-        <h3 className={`text-lg font-semibold mb-2 transition-colors ${
-          status === 'down' ? 'text-orange-400 group-hover:text-orange-300' : 'text-zinc-100 group-hover:text-emerald-400'
-        }`}>
-          {site.name}
-        </h3>
+        <div className="mb-2 flex items-center gap-2">
+          <h3 className={`text-lg font-semibold transition-colors ${
+            status === 'down' ? 'text-orange-400 group-hover:text-orange-300' : 'text-zinc-100 group-hover:text-emerald-400'
+          }`}>
+            {site.name}
+          </h3>
+          {site.sponsor?.active && (
+            <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide text-emerald-300">
+              Supporter
+            </span>
+          )}
+        </div>
         
         <p className="text-sm text-zinc-400 mb-4 line-clamp-2 flex-1">
           {site.description || 'A WebMIDI-capable website.'}

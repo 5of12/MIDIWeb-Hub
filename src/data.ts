@@ -19,7 +19,7 @@ export const initialSites: Site[] = [
     id: 'hexatone',
     name: 'PLAINSOUND HEXATONE',
     url: 'https://hexatone.plainsound.org',
-    tags: ['synth', 'webaudio', 'lumatone', 'isomorphic keyboard'],
+    tags: ['synth', 'webaudio', 'lumatone', 'isomorphic', 'keyboard'],
     description:
       'A microtonal app for mapping keyboards and 2D controllers to custom tunings.',
   },
@@ -179,6 +179,11 @@ export const initialSites: Site[] = [
     ],
     description:
       'Practice drums in the browser with 2000+ songs as drum sheet or rhythm game. AI-generated transcription from MP3/YouTube, MIDI input from electronic kits, real-time scoring, sheet editor, and PDF/MIDI export.',
+    sponsor: {
+      active: true,
+      tier: 'supporter',
+      since: '2026-05-11',
+    },
   },
 ];
 

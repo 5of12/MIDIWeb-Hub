@@ -35,6 +35,11 @@ export function SiteRow({ site, status }: SiteRowProps) {
           }`}>
             {site.name}
           </h3>
+          {site.sponsor?.active && (
+            <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide text-emerald-300">
+              Supporter
+            </span>
+          )}
           {status === 'loading' && <Loader2 className="w-4 h-4 text-zinc-500 animate-spin flex-shrink-0" />}
           {status === 'up' && <span title="Site is reachable" className="flex-shrink-0 flex"><CheckCircle2 className="w-4 h-4 text-emerald-500" /></span>}
           {status === 'down' && <span title="Site may be unreachable" className="flex-shrink-0 flex"><AlertCircle className="w-4 h-4 text-orange-500" /></span>}

@@ -153,9 +153,9 @@ export default function App() {
             </span>
           </h2>
           <p className="text-lg text-zinc-400 leading-relaxed">
-            A curated directory of synthesizers, utilities, and experiments that
+            A lovingly curated directory of synths, utilities, teaching tools and experiments that
             leverage the Web MIDI API directly in your browser. Connect your
-            MIDI controller and start playing.
+            MIDI controller and start playing!
           </p>
         </div>
 
@@ -246,7 +246,7 @@ export default function App() {
                 <button
                   key={tag}
                   onClick={() => toggleTag(tag)}
-                  className={`px-3 py-1.5 text-sm font-medium rounded-lg border transition-all duration-200 ${
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-all duration-200 ${
                     isSelected
                       ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400'
                       : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200'
