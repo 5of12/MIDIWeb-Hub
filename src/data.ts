@@ -179,6 +179,11 @@ export const initialSites: Site[] = [
     ],
     description:
       'Practice drums in the browser with 2000+ songs as drum sheet or rhythm game. AI-generated transcription from MP3/YouTube, MIDI input from electronic kits, real-time scoring, sheet editor, and PDF/MIDI export.',
+    sponsor: {
+      active: true,
+      tier: 'supporter',
+      since: '2026-05-11',
+    },
   },
 ];
 

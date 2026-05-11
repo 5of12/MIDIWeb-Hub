@@ -120,6 +120,10 @@ If you are browsing on **iOS**, **iPadOS**, **macOS**, or **visionOS**, MIDIWeb 
 
 Find out more at **[midiweb.cc](https://midiweb.cc)**.
 
+## Sponsorship
+
+MIDIWeb Hub may recognise supporters who help fund the project. Sponsorship does not guarantee inclusion, ranking, endorsement, or editorial preference. All listed sites must still be relevant to WebMIDI, browser-based music-making, music learning, or creative music technology.
+
 ## Independence and non-affiliation
 
 **MIDIWeb** and **MIDIWeb Hub** are independent projects created by **5of12**.
