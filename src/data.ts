@@ -165,6 +165,13 @@ export const initialSites: Site[] = [
       'A free, open-source web app to learn and practice piano with smart sheet music. Features a large and growing (12k+) personal music library enriched via MusicBrainz thesaurus and music21 musicological analysis (grade, tonality, composer, genre, hands, etc.). Offers interactive practice tools including looping, hand separation, real-time note correction, generated scales with instant MIDI feedback, and more. Supports MusicXML, MIDI, and PDF imports (with OMR).',
   },
   {
+    id: 'signal',
+    name: 'signal',
+    url: 'https://signalmidi.app',
+    tags: ['editor', 'piano', 'soundfont', 'open-source'],
+    description: 'Fully Open-sourced Online MIDI Editor',
+  },
+  {
     id: 'play-drums-online',
     name: 'PlayDrumsOnline',
     url: 'https://www.playdrumsonline.com',
