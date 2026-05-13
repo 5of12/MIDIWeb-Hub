@@ -191,6 +191,13 @@ export const initialSites: Site[] = [
       tier: 'supporter',
       since: '2026-05-11',
     },
+    {
+      id: 'vl3x-pilot',
+      name: 'Pilot',
+      url: 'https://vl3x.info',
+      tags: ['editor', 'configurator', 'sysex', 'guitar', 'vocal', 'utility', 'TCH', 'VL3', 'VL3x', 'VoiceLive 3', 'VoiceLive 3 Extreme'],
+      description: 'An editor for TC-Helicon VL3 and VL3X vocal-guitar processors. Edit every parameter, manage 500-preset banks, and copy steps between presets over USB MIDI SysEx.'
+  },
   },
 ];
 
