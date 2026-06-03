@@ -187,6 +187,14 @@ export const initialSites: Site[] = [
     description: 'Pilot is for TC Helicon VoiceLive 3 and VoiceLive 3 Extreme.',
   },
   {
+    id: 'chordboard',
+    name: 'Chordboard',
+    url: 'https://simoncoudeville.github.io/chordboard/',
+    tags: ['chords', 'scales', 'midi', 'usb', 'keyboard'],
+    description:
+      'Chordboard is a web-based chord pad app. Build and assign custom chords to a pad and play external gear over USB.',
+  },
+  {
     id: 'play-drums-online',
     name: 'PlayDrumsOnline',
     url: 'https://www.playdrumsonline.com',
