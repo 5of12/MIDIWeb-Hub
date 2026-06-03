@@ -6,7 +6,8 @@ export const initialSites: Site[] = [
     name: 'Espressivo',
     url: 'https://music.ursamedia.ch/apps/espressivo/',
     tags: ['webaudio', 'piano', 'interpret', 'score', 'gamepad'],
-    description: 'Control the performance of musical scores with the help of a gamepad'
+    description:
+      'Control the performance of musical scores with the help of a gamepad',
   },
   {
     id: 'sightread',
