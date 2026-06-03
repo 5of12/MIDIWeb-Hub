@@ -172,6 +172,13 @@ export const initialSites: Site[] = [
     description: 'Fully Open-sourced Online MIDI Editor',
   },
   {
+    id: 'Pilot',
+    name: 'Pilot',
+    url: 'https://vl3x.info',
+    tags: ['synth', 'webaudio'],
+    description: 'Pilot is for TC Helicon VoiceLive 3 and VoiceLive 3 Extreme.',
+  },
+  {
     id: 'play-drums-online',
     name: 'PlayDrumsOnline',
     url: 'https://www.playdrumsonline.com',
@@ -190,14 +197,7 @@ export const initialSites: Site[] = [
       active: true,
       tier: 'supporter',
       since: '2026-05-11',
-  },
-  {
-  id: 'Pilot',
-  name: 'Pilot',
-  url: 'https://vl3x.info',
-  tags: ['synth', 'webaudio'],
-  description: 'Pilot is for TC Helicon VoiceLive 3 and VoiceLive 3 Extreme.'
-  },
+    },
   },
 ];
 
