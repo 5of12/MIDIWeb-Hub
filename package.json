@@ -1,13 +1,15 @@
 {
   "name": "react-example",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0-beta1",
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
+    "build:with-previews": "npm run generate:previews && vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
+    "generate:previews": "tsx scripts/generate-site-previews.ts",
     "lint": "tsc --noEmit",
     "check:data": "prettier --check --single-quote src/data.ts",
     "format:data": "prettier --write --single-quote src/data.ts"
@@ -30,6 +32,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.21",
+    "playwright": "^1.60.0",
     "prettier": "^3.8.1",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",

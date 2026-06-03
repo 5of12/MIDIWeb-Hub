@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import {
   ArrowUpAZ,
+  Dices,
   Eye,
   EyeOff,
   Github,
@@ -14,6 +15,7 @@ import { initialSites, allTags } from './data';
 import { SiteCard } from './components/SiteCard';
 import { SiteRow } from './components/SiteRow';
 import { SubmitModal } from './components/SubmitModal';
+import { useSitePreviews } from './hooks/useSitePreviews';
 import { SortMode, ViewMode } from './types';
 import monologo from './monologo.svg';
 
@@ -36,12 +38,21 @@ export default function App() {
   const [sortMode, setSortMode] = useState<SortMode>('random');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [areTagsVisible, setAreTagsVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [hideUnreachable, setHideUnreachable] = useState(false);
+  const [isDiceRolling, setIsDiceRolling] = useState(true);
   const [siteStatuses, setSiteStatuses] = useState<
     Record<string, 'loading' | 'up' | 'down'>
   >({});
   const randomizedSites = useMemo(() => shuffleItems(initialSites), []);
+  const previewUrls = useSitePreviews();
+
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => setIsDiceRolling(false), 1200);
+
+    return () => window.clearTimeout(timeoutId);
+  }, []);
 
   useEffect(() => {
     initialSites.forEach(async (site) => {
@@ -98,10 +109,22 @@ export default function App() {
     );
   };
 
+  const loadRandomSite = () => {
+    const sitePool = filteredSites.length > 0 ? filteredSites : randomizedSites;
+    const randomSite = sitePool[Math.floor(Math.random() * sitePool.length)];
+
+    setIsDiceRolling(true);
+    window.setTimeout(() => setIsDiceRolling(false), 700);
+    window.open(randomSite.url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans selection:bg-emerald-500/30">
       {/* Header */}
-      <header className="sticky top-0 z-40 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800">
+      <header
+        className="sticky top-0 z-40 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800"
+        aria-label="MIDIWeb Hub header"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
@@ -128,14 +151,17 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
+              aria-label="About MIDIWeb, opens in a new tab"
             >
               About MIDIWeb
             </a>
             <button
               onClick={() => setIsModalOpen(true)}
               className="flex items-center gap-2 px-4 py-2 bg-zinc-100 hover:bg-white text-zinc-900 font-semibold rounded-lg transition-colors shadow-sm"
+              type="button"
+              aria-label="Submit a WebMIDI site"
             >
-              <Plus className="w-4 h-4" />
+              <Plus className="w-4 h-4" aria-hidden="true" />
               <span className="hidden sm:inline">Submit Site</span>
             </button>
           </div>
@@ -143,38 +169,57 @@ export default function App() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+        aria-label="WebMIDI site directory"
+      >
         {/* Hero Section */}
         <div className="max-w-3xl mb-12">
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-100 mb-6 leading-tight">
-            Explore the best of{' '}
+            Explore {' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
               WebMIDI
             </span>
           </h2>
           <p className="text-lg text-zinc-400 leading-relaxed">
-            A lovingly curated directory of synths, utilities, teaching tools and experiments that
-            leverage the Web MIDI API directly in your browser. Connect your
-            MIDI controller and start playing!
+            A curated directory of synths, utilities, teaching tools &
+            experiments built for the Web MIDI API. Connect your MIDI
+            controller & start playing.
           </p>
         </div>
 
         {/* Controls */}
         <div className="flex flex-col lg:flex-row gap-6 mb-10">
           <div className="flex-1 relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" />
+            <Search
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500"
+              aria-hidden="true"
+            />
             <input
               type="text"
               placeholder="Search sites, URLs, or descriptions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all"
+              aria-label="Search WebMIDI sites"
             />
           </div>
 
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <button
+              onClick={loadRandomSite}
+              className={`inline-flex h-[50px] w-[50px] items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-zinc-100 shadow-sm transition-all hover:-translate-y-0.5 hover:border-zinc-700 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-100 focus:ring-offset-2 focus:ring-offset-zinc-950 ${
+                isDiceRolling ? 'dice-roll' : ''
+              }`}
+              type="button"
+              aria-label="Open a random WebMIDI site"
+              title="Open a random WebMIDI site"
+            >
+              <Dices className="h-5 w-5" aria-hidden="true" />
+            </button>
+
             <label className="flex items-center gap-3 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-400">
-              <ArrowUpAZ className="w-5 h-5 text-zinc-500" />
+              <ArrowUpAZ className="w-5 h-5 text-zinc-500" aria-hidden="true" />
               <span className="text-sm font-medium">Sort</span>
               <select
                 value={sortMode}
@@ -197,78 +242,134 @@ export default function App() {
             </label>
 
             <button
+              onClick={() => setAreTagsVisible((isVisible) => !isVisible)}
+              className={`flex items-center gap-2 px-4 py-3 rounded-xl border transition-colors ${
+                areTagsVisible || selectedTags.length > 0
+                  ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400'
+                  : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200'
+              }`}
+              type="button"
+              aria-expanded={areTagsVisible}
+              aria-controls="tag-filter-cloud"
+              aria-label={
+                selectedTags.length > 0
+                  ? `Filter by tags, ${selectedTags.length} selected`
+                  : 'Filter by tags'
+              }
+            >
+              <TagIcon className="w-5 h-5" aria-hidden="true" />
+              <span className="text-sm font-medium">Filter by tags</span>
+              {selectedTags.length > 0 && (
+                <span
+                  className="rounded-full bg-emerald-400 px-2 py-0.5 text-xs font-bold text-zinc-950"
+                  aria-hidden="true"
+                >
+                  {selectedTags.length}
+                </span>
+              )}
+            </button>
+
+            <button
               onClick={() => setHideUnreachable(!hideUnreachable)}
               className={`flex items-center gap-2 px-4 py-3 rounded-xl border transition-colors ${
                 hideUnreachable
                   ? 'bg-orange-500/10 border-orange-500/50 text-orange-400'
                   : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200'
               }`}
+              type="button"
+              aria-pressed={hideUnreachable}
+              aria-label={
+                hideUnreachable
+                  ? 'Show unreachable sites'
+                  : 'Hide unreachable sites'
+              }
             >
               {hideUnreachable ? (
-                <Eye className="w-5 h-5" />
+                <Eye className="w-5 h-5" aria-hidden="true" />
               ) : (
-                <EyeOff className="w-5 h-5" />
+                <EyeOff className="w-5 h-5" aria-hidden="true" />
               )}
-              <span className="text-sm font-medium">
+              {/* <span className="text-sm font-medium">
                 {hideUnreachable ? 'Show Unreachable' : 'Hide Unreachable'}
-              </span>
+              </span> */}
             </button>
 
-            <div className="flex items-center gap-2 bg-zinc-900 p-1 rounded-xl border border-zinc-800">
+            <div
+              className="flex items-center gap-2 bg-zinc-900 p-1 rounded-xl border border-zinc-800"
+              role="group"
+              aria-label="Choose site layout"
+            >
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-lg flex items-center gap-2 transition-colors ${viewMode === 'grid' ? 'bg-zinc-800 text-emerald-400 shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
                 aria-label="Grid view"
+                aria-pressed={viewMode === 'grid'}
+                type="button"
               >
-                <LayoutGrid className="w-5 h-5" />
+                <LayoutGrid className="w-5 h-5" aria-hidden="true" />
               </button>
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded-lg flex items-center gap-2 transition-colors ${viewMode === 'list' ? 'bg-zinc-800 text-emerald-400 shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
                 aria-label="List view"
+                aria-pressed={viewMode === 'list'}
+                type="button"
               >
-                <List className="w-5 h-5" />
+                <List className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
           </div>
         </div>
 
         {/* Tags */}
-        <div className="mb-10">
-          <div className="flex items-center gap-2 mb-4 text-sm font-medium text-zinc-400">
-            <TagIcon className="w-4 h-4" />
-            <span>Filter by tags</span>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {allTags.map((tag) => {
-              const isSelected = selectedTags.includes(tag);
-              return (
+        {areTagsVisible && (
+          <div
+            id="tag-filter-cloud"
+            className="mb-10 rounded-xl border border-zinc-800 bg-zinc-900/70 p-4"
+            role="group"
+            aria-label="Tag filters"
+          >
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex flex-wrap gap-2">
+                {allTags.map((tag) => {
+                  const isSelected = selectedTags.includes(tag);
+                  return (
+                    <button
+                      key={tag}
+                      onClick={() => toggleTag(tag)}
+                      className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-all duration-200 ${
+                        isSelected
+                          ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400'
+                          : 'bg-zinc-950/80 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200'
+                      }`}
+                      type="button"
+                      aria-pressed={isSelected}
+                      aria-label={`${isSelected ? 'Remove' : 'Add'} ${tag} tag filter`}
+                    >
+                      {tag}
+                    </button>
+                  );
+                })}
+              </div>
+              {selectedTags.length > 0 && (
                 <button
-                  key={tag}
-                  onClick={() => toggleTag(tag)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-all duration-200 ${
-                    isSelected
-                      ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400'
-                      : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200'
-                  }`}
+                  onClick={() => setSelectedTags([])}
+                  className="px-3 py-1.5 text-sm font-medium text-zinc-500 hover:text-zinc-300 transition-colors"
+                  type="button"
+                  aria-label="Clear all selected tag filters"
                 >
-                  {tag}
+                  Clear filters
                 </button>
-              );
-            })}
-            {selectedTags.length > 0 && (
-              <button
-                onClick={() => setSelectedTags([])}
-                className="px-3 py-1.5 text-sm font-medium text-zinc-500 hover:text-zinc-300 transition-colors"
-              >
-                Clear filters
-              </button>
-            )}
+              )}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Results */}
-        <div className="mb-6 flex items-center justify-between text-sm text-zinc-500">
+        <div
+          className="mb-6 flex items-center justify-between text-sm text-zinc-500"
+          aria-live="polite"
+        >
           <span>
             Showing {filteredSites.length}{' '}
             {filteredSites.length === 1 ? 'site' : 'sites'}
@@ -278,7 +379,7 @@ export default function App() {
         {filteredSites.length === 0 ? (
           <div className="text-center py-24 bg-zinc-900/50 border border-zinc-800 border-dashed rounded-2xl">
             <div className="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Search className="w-8 h-8 text-zinc-500" />
+              <Search className="w-8 h-8 text-zinc-500" aria-hidden="true" />
             </div>
             <h3 className="text-xl font-semibold text-zinc-100 mb-2">
               No sites found
@@ -293,6 +394,8 @@ export default function App() {
                 setSelectedTags([]);
               }}
               className="mt-6 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-medium rounded-lg transition-colors"
+              type="button"
+              aria-label="Clear search and tag filters"
             >
               Clear all filters
             </button>
@@ -304,6 +407,7 @@ export default function App() {
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
                 : 'flex flex-col gap-4'
             }
+            aria-label={`${viewMode === 'grid' ? 'Grid' : 'List'} of WebMIDI sites`}
           >
             {filteredSites.map((site) =>
               viewMode === 'grid' ? (
@@ -311,12 +415,14 @@ export default function App() {
                   key={site.id}
                   site={site}
                   status={siteStatuses[site.id] || 'loading'}
+                  previewImageUrl={previewUrls[site.id]}
                 />
               ) : (
                 <SiteRow
                   key={site.id}
                   site={site}
                   status={siteStatuses[site.id] || 'loading'}
+                  previewImageUrl={previewUrls[site.id]}
                 />
               ),
             )}
@@ -325,7 +431,10 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-zinc-800 bg-zinc-950 py-12 mt-20">
+      <footer
+        className="border-t border-zinc-800 bg-zinc-950 py-12 mt-20"
+        aria-label="MIDIWeb Hub footer"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-zinc-800 rounded-lg flex items-center justify-center">
@@ -345,8 +454,9 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-500 hover:text-zinc-300 transition-colors flex items-center gap-2"
+              aria-label="MIDIWeb Hub GitHub repository, opens in a new tab"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-5 h-5" aria-hidden="true" />
               <span>GitHub</span>
             </a>
             <a
@@ -354,6 +464,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-500 hover:text-zinc-300 transition-colors"
+              aria-label="MIDIWeb.cc, opens in a new tab"
             >
               MIDIWeb.cc
             </a>

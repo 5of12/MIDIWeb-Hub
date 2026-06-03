@@ -43,9 +43,12 @@ jobs:
             echo "::error title=src/data.ts formatting::Run 'npm run format:data', commit the updated src/data.ts, and push again."
             exit 1
           }
+
+      - name: Install preview browser
+        run: npx playwright install --with-deps chromium
         
       - name: Build
-        run: npm run build
+        run: npm run build:with-previews
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
