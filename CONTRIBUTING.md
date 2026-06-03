@@ -28,11 +28,11 @@ If it’s browser-based, musically interesting, and uses MIDI, it may be a good 
 
 ```json
 {
-  "id": "your-site-id",
-  "name": "Your Site Name",
-  "url": "https://yoursite.com",
-  "tags": ["synth", "webaudio"],
-  "description": "A short description of your site."
+  id: 'your-site-id',
+  name: 'Your Site Name',
+  url: 'https://yoursite.com',
+  tags: ['synth', 'webaudio'],
+  description: 'A short description of your site.'
 }
 ```
 

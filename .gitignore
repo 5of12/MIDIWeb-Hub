@@ -137,3 +137,10 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Generated site preview textures
+public/site-previews/*.jpg
+public/site-previews/*.jpeg
+public/site-previews/*.png
+public/site-previews/manifest.json
+!public/site-previews/.gitkeep

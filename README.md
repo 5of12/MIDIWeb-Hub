@@ -77,11 +77,11 @@ Add your site using the following format:
 
 ```json
 {
-  "id": "your-site-id",
-  "name": "Your Site Name",
-  "url": "https://yoursite.com",
-  "tags": ["synth", "webaudio"],
-  "description": "A short description of your site."
+  id: 'your-site-id',
+  name: 'Your Site Name',
+  url: 'https://yoursite.com',
+  tags: ['synth', 'webaudio'],
+  description: 'A short description of your site.'
 }
 ```
 
@@ -112,17 +112,21 @@ A few practical suggestions:
 - use the canonical site URL
 - check that the link works before submitting
 
-## About MIDIWeb
+## About MIDIWeb Browser
 
-**MIDIWeb** is a browser for Apple platforms that helps users explore websites using WebMIDI.
+**[MIDIWeb Browser](https://apps.apple.com/gb/app/midiweb-browser/id6757226617)** is an App for Apple platforms that helps users explore websites using WebMIDI.
 
-If you are browsing on **iOS**, **iPadOS**, **macOS**, or **visionOS**, MIDIWeb offers a dedicated way to access WebMIDI experiences on Apple devices.
+If you are browsing on **iOS**, **iPadOS**, **macOS**, or **visionOS**, [MIDIWeb](https://apps.apple.com/gb/app/midiweb-browser/id6757226617) offers a dedicated way to access WebMIDI experiences on Apple devices.
 
 Find out more at **[midiweb.cc](https://midiweb.cc)**.
 
+## Sponsorship
+
+MIDIWeb Hub may recognise supporters who help fund the MIDIWeb Browser and/or MIDIWeb Hub projects. Sponsorship does not guarantee inclusion, ranking, endorsement, or editorial preference. All listed sites must still be relevant to WebMIDI, browser-based music-making, music learning, or creative music technology.
+
 ## Independence and non-affiliation
 
-**MIDIWeb** and **MIDIWeb Hub** are independent projects created by **5of12**.
+**MIDIWeb Browser** and **MIDIWeb Hub** are independent projects created by **5of12**.
 
 They are **not affiliated with, endorsed by, sponsored by, or officially connected with The MIDI Association**. Any references to MIDI, WebMIDI, MIDI standards, or related technologies are used for descriptive and informational purposes only.
 

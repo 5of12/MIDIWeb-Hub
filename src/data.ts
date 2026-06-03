@@ -2,6 +2,14 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'espressivo',
+    name: 'Espressivo',
+    url: 'https://music.ursamedia.ch/apps/espressivo/',
+    tags: ['webaudio', 'piano', 'interpret', 'score', 'gamepad'],
+    description:
+      'Control the performance of musical scores with the help of a gamepad',
+  },
+  {
     id: 'sightread',
     name: 'SIGHTREAD',
     url: 'https://sightread.dev/',
@@ -19,7 +27,7 @@ export const initialSites: Site[] = [
     id: 'hexatone',
     name: 'PLAINSOUND HEXATONE',
     url: 'https://hexatone.plainsound.org',
-    tags: ['synth', 'webaudio', 'lumatone', 'isomorphic keyboard'],
+    tags: ['synth', 'webaudio', 'lumatone', 'isomorphic', 'keyboard'],
     description:
       'A microtonal app for mapping keyboards and 2D controllers to custom tunings.',
   },
@@ -165,12 +173,39 @@ export const initialSites: Site[] = [
       'A free, open-source web app to learn and practice piano with smart sheet music. Features a large and growing (12k+) personal music library enriched via MusicBrainz thesaurus and music21 musicological analysis (grade, tonality, composer, genre, hands, etc.). Offers interactive practice tools including looping, hand separation, real-time note correction, generated scales with instant MIDI feedback, and more. Supports MusicXML, MIDI, and PDF imports (with OMR).',
   },
   {
-    id: 'chordboard',
-    name: 'Chordboard',
-    url: 'https://simoncoudeville.github.io/chordboard/',
-    tags: ['chords', 'scales', 'midi', 'usb', 'keyboard'],
+    id: 'signal',
+    name: 'signal',
+    url: 'https://signalmidi.app',
+    tags: ['editor', 'piano', 'soundfont', 'open-source'],
+    description: 'Fully Open-sourced Online MIDI Editor',
+  },
+  {
+    id: 'Pilot',
+    name: 'Pilot',
+    url: 'https://vl3x.info',
+    tags: ['synth', 'webaudio'],
+    description: 'Pilot is for TC Helicon VoiceLive 3 and VoiceLive 3 Extreme.',
+  },
+  {
+    id: 'play-drums-online',
+    name: 'PlayDrumsOnline',
+    url: 'https://www.playdrumsonline.com',
+    tags: [
+      'drum',
+      'midi',
+      'training',
+      'practice',
+      'sheet-music',
+      'transcription',
+      'sequencer',
+    ],
     description:
-      'Chordboard is a web-based chord pad app. Build and assign custom chords to a pad and play external gear over USB.',
+      'Practice drums in the browser with 2000+ songs as drum sheet or rhythm game. AI-generated transcription from MP3/YouTube, MIDI input from electronic kits, real-time scoring, sheet editor, and PDF/MIDI export.',
+    sponsor: {
+      active: true,
+      tier: 'supporter',
+      since: '2026-05-11',
+    },
   },
 ];
 
