@@ -33,6 +33,10 @@ function shuffleItems<T>(items: T[]) {
   return shuffled;
 }
 
+function pickRandomItem<T>(items: T[]) {
+  return items[Math.floor(Math.random() * items.length)];
+}
+
 export default function App() {
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [sortMode, setSortMode] = useState<SortMode>('random');
@@ -42,6 +46,9 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [hideUnreachable, setHideUnreachable] = useState(false);
   const [isDiceRolling, setIsDiceRolling] = useState(true);
+  const [diceSiteUrl, setDiceSiteUrl] = useState(
+    () => pickRandomItem(initialSites).url,
+  );
   const [siteStatuses, setSiteStatuses] = useState<
     Record<string, 'loading' | 'up' | 'down'>
   >({});
@@ -109,13 +116,18 @@ export default function App() {
     );
   };
 
-  const loadRandomSite = () => {
+  useEffect(() => {
     const sitePool = filteredSites.length > 0 ? filteredSites : randomizedSites;
-    const randomSite = sitePool[Math.floor(Math.random() * sitePool.length)];
+
+    setDiceSiteUrl(pickRandomItem(sitePool).url);
+  }, [filteredSites, randomizedSites]);
+
+  const prepareNextRandomSite = () => {
+    const sitePool = filteredSites.length > 0 ? filteredSites : randomizedSites;
 
     setIsDiceRolling(true);
     window.setTimeout(() => setIsDiceRolling(false), 700);
-    window.open(randomSite.url, '_blank', 'noopener,noreferrer');
+    window.setTimeout(() => setDiceSiteUrl(pickRandomItem(sitePool).url), 0);
   };
 
   return (
@@ -206,17 +218,19 @@ export default function App() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3 shrink-0">
-            <button
-              onClick={loadRandomSite}
+            <a
+              href={diceSiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={prepareNextRandomSite}
               className={`inline-flex h-[50px] w-[50px] items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-zinc-100 shadow-sm transition-all hover:-translate-y-0.5 hover:border-zinc-700 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-100 focus:ring-offset-2 focus:ring-offset-zinc-950 ${
                 isDiceRolling ? 'dice-roll' : ''
               }`}
-              type="button"
               aria-label="Open a random WebMIDI site"
               title="Open a random WebMIDI site"
             >
               <Dices className="h-5 w-5" aria-hidden="true" />
-            </button>
+            </a>
 
             <label className="flex items-center gap-3 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-400">
               <ArrowUpAZ className="w-5 h-5 text-zinc-500" aria-hidden="true" />
