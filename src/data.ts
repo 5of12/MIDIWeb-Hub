@@ -169,8 +169,9 @@ export const initialSites: Site[] = [
     name: 'Chordboard',
     url: 'https://simoncoudeville.github.io/chordboard/',
     tags: ['chords', 'scales', 'midi', 'usb', 'keyboard'],
-    description: 'Chordboard is a web-based chord pad app. Build and assign custom chords to a pad and play external gear over USB.'
-  }
+    description:
+      'Chordboard is a web-based chord pad app. Build and assign custom chords to a pad and play external gear over USB.',
+  },
 ];
 
 export const allTags = Array.from(
