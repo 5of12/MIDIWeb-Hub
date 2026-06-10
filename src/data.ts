@@ -10,6 +10,25 @@ export const initialSites: Site[] = [
       'Control the performance of musical scores with the help of a gamepad',
   },
   {
+    id: 'synth-explorer',
+    name: 'Synth Explorer',
+    url: 'https://synth-explorer.com',
+    tags: [
+      'synth',
+      'analog',
+      'sysex',
+      'utility',
+      'editor',
+      'hardware',
+      'librarian',
+      'library',
+      'oberheim',
+      'sequential',
+    ],
+    description:
+      'A browser-based editor and librarian for the Oberheim OB-6 and Sequential Prophet-6.',
+  },
+  {
     id: 'sightread',
     name: 'SIGHTREAD',
     url: 'https://sightread.dev/',
