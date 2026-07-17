@@ -246,13 +246,21 @@ export const initialSites: Site[] = [
     },
   },
   {
-      id: 'midipiano',
-      name: 'midipiano.app',
-      url: 'https://midipiano.app',
-      tags: ['piano','midi', 'practice', 'sightread', 'score', 'training', 'webaudio'],
-      description:
-        'Practice piano in your browser: connect a MIDI keyboard, import MusicXML or MEI scores, and get real-time per-hand feedback.',
-    },  
+    id: 'midipiano',
+    name: 'midipiano.app',
+    url: 'https://midipiano.app',
+    tags: [
+      'piano',
+      'midi',
+      'practice',
+      'sightread',
+      'score',
+      'training',
+      'webaudio',
+    ],
+    description:
+      'Practice piano in your browser: connect a MIDI keyboard, import MusicXML or MEI scores, and get real-time per-hand feedback.',
+  },
 ];
 
 export const allTags = Array.from(
