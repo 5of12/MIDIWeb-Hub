@@ -245,6 +245,14 @@ export const initialSites: Site[] = [
       since: '2026-05-11',
     },
   },
+  {
+      id: 'midipiano',
+      name: 'midipiano.app',
+      url: 'https://midipiano.app',
+      tags: ['piano','midi', 'practice', 'sightread', 'score', 'training', 'webaudio'],
+      description:
+        'Practice piano in your browser: connect a MIDI keyboard, import MusicXML or MEI scores, and get real-time per-hand feedback.',
+    },  
 ];
 
 export const allTags = Array.from(
