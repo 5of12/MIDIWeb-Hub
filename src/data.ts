@@ -253,6 +253,14 @@ export const initialSites: Site[] = [
     description:
       'A browser-based music tracker with synthesized instruments — a whole song fits in a shareable link. Supports MIDI in for note entry and MIDI out for sequencing external hardware and software.',
   },
+  {
+    id: 'ultimate-piano',
+    name: 'The Ultimate Piano',
+    url: 'https://app.the-ultimate-piano.com/',
+    tags: ['piano', 'practice', 'training', 'chord', 'scales', 'score', 'sheet-music', 'sight-reading', 'webmidi'],
+    description: 'Piano practice workspace: live notation and chord detection from your MIDI keyboard, plus sheet-music playback, scale and chord drills, and ear training.'
+  }
+
 ];
 
 export const allTags = Array.from(
