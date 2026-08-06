@@ -246,12 +246,20 @@ export const initialSites: Site[] = [
     },
   },
   {
-    id: 'rowbot',
-    name: 'ROWBOT',
-    url: 'https://playrowbot.com',
-    tags: ['tracker', 'sequencer', 'synth', 'webaudio', 'midi', 'chiptune'],
+    id: 'midipiano',
+    name: 'midipiano.app',
+    url: 'https://midipiano.app',
+    tags: [
+      'piano',
+      'midi',
+      'practice',
+      'sightread',
+      'score',
+      'training',
+      'webaudio',
+    ],
     description:
-      'A browser-based music tracker with synthesized instruments — a whole song fits in a shareable link. Supports MIDI in for note entry and MIDI out for sequencing external hardware and software.',
+      'Practice piano in your browser: connect a MIDI keyboard, import MusicXML or MEI scores, and get real-time per-hand feedback.',
   },
 ];
 
