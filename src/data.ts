@@ -257,10 +257,25 @@ export const initialSites: Site[] = [
     id: 'ultimate-piano',
     name: 'The Ultimate Piano',
     url: 'https://app.the-ultimate-piano.com/',
-    tags: ['piano', 'practice', 'training', 'chord', 'scales', 'score', 'sheet-music', 'sight-reading', 'webmidi'],
-    description: 'Piano practice workspace: live notation and chord detection from your MIDI keyboard, plus sheet-music playback, scale and chord drills, and ear training.'
-  }
-
+    tags: [
+      'piano',
+      'practice',
+      'training',
+      'chord',
+      'scales',
+      'score',
+      'sheet-music',
+      'sight-reading',
+      'webmidi',
+    ],
+    sponsor: {
+      active: true,
+      tier: 'supporter',
+      since: '2026-08-01',
+    },
+    description:
+      'Piano practice workspace: live notation and chord detection from your MIDI keyboard, plus sheet-music playback, scale and chord drills, and ear training.',
+  },
 ];
 
 export const allTags = Array.from(
