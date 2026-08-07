@@ -2,6 +2,25 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'partykeys',
+    name: 'PartyKeys AI',
+    url: 'https://partykeys.ai/',
+    tags: [
+      'hardware',
+      'keyboard',
+      'apps',
+      'midi',
+      'sysex',
+      'open-source',
+      'piano',
+      'practice',
+      'game',
+      'chord',
+  ],
+    description:
+    'A 36-key light-up MIDI keyboard with a universe of AI-powered music apps.',
+  },
+  {
     id: 'espressivo',
     name: 'Espressivo',
     url: 'https://music.ursamedia.ch/apps/espressivo/',
