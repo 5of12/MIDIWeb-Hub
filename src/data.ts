@@ -16,9 +16,9 @@ export const initialSites: Site[] = [
       'practice',
       'game',
       'chord',
-  ],
+    ],
     description:
-    'A 36-key light-up MIDI keyboard with a universe of AI-powered music apps.',
+      'A 36-key light-up MIDI keyboard with a universe of AI-powered music apps.',
   },
   {
     id: 'espressivo',
