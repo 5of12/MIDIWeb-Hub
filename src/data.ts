@@ -304,6 +304,23 @@ export const initialSites: Site[] = [
       'Piano practice workspace: live notation and chord detection from your MIDI keyboard, plus sheet-music playback, scale and chord drills, and ear training.',
   },
   {
+    id: 'zoom-l6-companion',
+    name: 'Zoom L6 Companion',
+    url: 'https://zooml6.webmidi.cc',
+    tags: [
+      'hardware',
+      'mixer',
+      'controller',
+      'utility',
+      'editor',
+      'open-source',
+      'midi',
+      'webmidi',
+    ],
+    description:
+      'A WebMIDI companion for the Zoom LiveTrak L6 and L6Max with channel strips, EQ, LFOs, sound pads, and customizable MIDI CC mappings.',
+  },
+  {
     id: 'workshop-turing-machine',
     name: 'Turing Machine Editor',
     url: 'https://tomwhitwell.github.io/Turing_Machine_Workshop_Computer/',
