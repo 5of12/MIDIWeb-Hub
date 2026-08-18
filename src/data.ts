@@ -304,12 +304,13 @@ export const initialSites: Site[] = [
       'Piano practice workspace: live notation and chord detection from your MIDI keyboard, plus sheet-music playback, scale and chord drills, and ear training.',
   },
   {
-  id: 'bceditor',
-  name: 'BCEditor',
-  url: 'https://midiq.online/bceditor', 
-  tags: ['editor', 'utility', 'hardware', 'webmidi', 'library'],
-  description: 'A web-based MIDI editor and preset library for Behringer BCF2000 & BCR2000 controllers.'
-}
+    id: 'bceditor',
+    name: 'BCEditor',
+    url: 'https://midiq.online/bceditor',
+    tags: ['editor', 'utility', 'hardware', 'webmidi', 'library'],
+    description:
+      'A web-based MIDI editor and preset library for Behringer BCF2000 & BCR2000 controllers.',
+  },
 ];
 
 export const allTags = Array.from(
