@@ -60,6 +60,22 @@ export const initialSites: Site[] = [
       'A browser-based editor and librarian for the Oberheim OB-6 and Sequential Prophet-6.',
   },
   {
+    id: 'bipluk',
+    name: 'bipluk',
+    url: 'https://bipluk.com',
+    tags: [
+      'hardware',
+      'sysex',
+      'utility',
+      'librarian',
+      'library',
+      'webmidi',
+      'synth',
+    ],
+    description:
+      'A browser-based MIDI librarian for backing up, organizing, searching, and restoring patches on vintage and modern hardware synthesizers.',
+  },
+  {
     id: 'sightread',
     name: 'SIGHTREAD',
     url: 'https://sightread.dev/',
