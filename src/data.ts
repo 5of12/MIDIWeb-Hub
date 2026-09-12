@@ -106,6 +106,14 @@ export const initialSites: Site[] = [
       'A microtonal web synthesizer with advanced tuning capabilities.',
   },
   {
+    id: 'warbl-scala-fingering-laboratory',
+    name: 'WARBL Scala Fingering Laboratory',
+    url: 'https://burningcicada.github.io/warbl-scala-fingering-laboratory/',
+    tags: ['controller', 'microtonal', 'webmidi', 'utility', 'training'],
+    description:
+      'Explore Scala tunings, design and test WARBL/WARBL2 fingering maps, audition exact microtonal pitch, and analyze expressive performance in the browser.',
+  },
+  {
     id: 'midi-city',
     name: 'midi.city',
     url: 'https://midi.city',
