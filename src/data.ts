@@ -605,6 +605,14 @@ export const initialSites: Site[] = [
     description:
       'Web MIDI sample library and kit assignment editor for the Workshop Computer NIBBLE-KO percussion looper.',
   },
+  {
+    id: 'mock-band',
+    name: 'Mock Band',
+    url: 'https://mock.band/',
+    tags: ['webmidi', 'webaudio', 'practice', 'controller', 'drums'],
+    description:
+      'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
+  },
 ];
 
 export const allTags = Array.from(
