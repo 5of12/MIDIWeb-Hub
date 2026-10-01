@@ -159,7 +159,7 @@ export default function App() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://midiweb.cc"
+              href="https://midiweb.app"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
@@ -474,13 +474,13 @@ export default function App() {
               <span>GitHub</span>
             </a>
             <a
-              href="https://midiweb.cc"
+              href="https://midiweb.app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-500 hover:text-zinc-300 transition-colors"
-              aria-label="MIDIWeb.cc, opens in a new tab"
+              aria-label="MIDIWeb.app, opens in a new tab"
             >
-              MIDIWeb.cc
+              MIDIWeb.app
             </a>
           </div>
         </div>

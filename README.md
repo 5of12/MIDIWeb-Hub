@@ -5,7 +5,7 @@
 
 It exists to help musicians, makers, educators, developers, and curious internet explorers discover the growing ecosystem of browser-based musical tools — from synths and sequencers to MIDI utilities, experiments, educational tools, and playful oddities!
 
-MIDIWeb Hub is also a companion to **[MIDIWeb](https://midiweb.cc)**, a browser for Apple platforms designed to make it easier to explore WebMIDI on **iPhone, iPad, macOS, and visionOS**.
+MIDIWeb Hub is also a companion to **[MIDIWeb](https://midiweb.app)**, a browser for Apple platforms designed to make it easier to explore WebMIDI on **iPhone, iPad, macOS, and visionOS**.
 
 ## Why make a directory of WebMIDI Sites!?
 
@@ -46,9 +46,9 @@ Depending on your setup, this may include physical USB or Bluetooth MIDI hardwar
 
 WebMIDI support on Apple platforms has historically been limited.
 
-If you want to explore WebMIDI websites on **iPhone, iPad, or Apple Vision Pro**, consider downloading **[MIDIWeb](https://midiweb.cc)** — a browser built for Web MIDI on Apple devices.
+If you want to explore WebMIDI websites on **iPhone, iPad, or Apple Vision Pro**, consider downloading **[MIDIWeb](https://midiweb.app)** — a browser built for Web MIDI on Apple devices.
 
-Learn more at **[midiweb.cc](https://midiweb.cc)**.
+Learn more at **[midiweb.app](https://midiweb.app)**.
 
 ## What kind of sites belong here?
 
@@ -118,7 +118,7 @@ A few practical suggestions:
 
 If you are browsing on **iOS**, **iPadOS**, **macOS**, or **visionOS**, [MIDIWeb](https://apps.apple.com/gb/app/midiweb-browser/id6757226617) offers a dedicated way to access WebMIDI experiences on Apple devices.
 
-Find out more at **[midiweb.cc](https://midiweb.cc)**.
+Find out more at **[midiweb.app](https://midiweb.app)**.
 
 ## Sponsorship
 
