@@ -605,6 +605,23 @@ export const initialSites: Site[] = [
     description:
       'Web MIDI sample library and kit assignment editor for the Workshop Computer NIBBLE-KO percussion looper.',
   },
+  {
+    id: 'oddsid-editor',
+    name: 'OddSID Editor',
+    url: 'https://oddsid.malm.audio',
+    tags: [
+      'synth',
+      'editor',
+      'sysex',
+      'hardware',
+      'firmware',
+      'webmidi',
+      'sid',
+      'chiptune',
+    ],
+    description:
+      'Web MIDI editor for the OddSID, a six-voice dual-SID synth on the RP2350: live panel controls, SID-Wizard instruments and wave/pulse/filter tables.',
+  },
 ];
 
 export const allTags = Array.from(
