@@ -2,6 +2,22 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'morse-mastery',
+    name: 'Morse Mastery',
+    url: 'https://www.morsemastery.com',
+    tags: [
+      'webmidi',
+      'amateur-radio',
+      'morse-code',
+      'practice',
+      'keyboard',
+      'touch',
+      'halikey',
+    ],
+    description:
+      'Learn or practice morse code using touch, keyboard, or the HaliKey MIDI.',
+  },
+  {
     id: 'partykeys',
     name: 'PartyKeys AI',
     url: 'https://partykeys.ai/',
