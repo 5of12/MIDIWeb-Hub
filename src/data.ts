@@ -1,6 +1,24 @@
 import { Site } from './types';
 
 export const initialSites: Site[] = [
+
+  {
+    id: 'wednesday',
+    name: 'wednesday',
+    url: 'https://hyrfilm.github.io/wednesday',
+    tags: ['sequencer', 
+           'webmidi', 
+           'live-coding', 
+           'modular', 
+           'polyrhythms', 
+           'polymeter', 
+           'phasing', 
+           'eucledian', 
+           'sample-accurate scheduling',
+           'phase-based', 
+           'generative'],
+            description: 'Wednesday is a music environment for controlling hardware, music-software. It has a phase-based notion of time, supports an unlimited number of individual sequencers where each sequencer can have whatever period you set it to. In addition it supports the typical editor workflows, as well generative features, such as step probability, GOTO, etc. It has support for a more wide range either by using live-coding using its built-in programming language or by accessing modulation matrix. The timing should typically be in the sub-millisecond range since events are scheduled with sample accuracy.'
+  },
   {
     id: 'partykeys',
     name: 'PartyKeys AI',
