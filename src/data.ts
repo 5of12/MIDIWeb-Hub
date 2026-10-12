@@ -106,6 +106,14 @@ export const initialSites: Site[] = [
       'A microtonal web synthesizer with advanced tuning capabilities.',
   },
   {
+    id: 'warbl-scala-fingering-laboratory',
+    name: 'WARBL Scala Fingering Laboratory',
+    url: 'https://burningcicada.github.io/warbl-scala-fingering-laboratory/',
+    tags: ['controller', 'microtonal', 'webmidi', 'utility', 'training'],
+    description:
+      'Explore Scala tunings, design and test WARBL/WARBL2 fingering maps, audition exact microtonal pitch, and analyze expressive performance in the browser.',
+  },
+  {
     id: 'midi-city',
     name: 'midi.city',
     url: 'https://midi.city',
@@ -621,6 +629,14 @@ export const initialSites: Site[] = [
     ],
     description:
       'Web MIDI editor for the OddSID, a six-voice dual-SID synth on the RP2350: live panel controls, SID-Wizard instruments and wave/pulse/filter tables.',
+    },
+    {
+    id: 'mock-band',
+    name: 'Mock Band',
+    url: 'https://mock.band/',
+    tags: ['webmidi', 'webaudio', 'practice', 'controller', 'drums'],
+    description:
+      'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
   },
 ];
 
