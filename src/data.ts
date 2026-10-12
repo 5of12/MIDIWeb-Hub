@@ -629,8 +629,8 @@ export const initialSites: Site[] = [
     ],
     description:
       'Web MIDI editor for the OddSID, a six-voice dual-SID synth on the RP2350: live panel controls, SID-Wizard instruments and wave/pulse/filter tables.',
-    },
-    {
+  },
+  {
     id: 'mock-band',
     name: 'Mock Band',
     url: 'https://mock.band/',
