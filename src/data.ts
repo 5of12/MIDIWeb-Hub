@@ -638,6 +638,23 @@ export const initialSites: Site[] = [
     description:
       'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
   },
+  {
+    id: 'klaviertrainer-3000',
+    name: 'Klaviertrainer 3000',
+    url: 'https://klaviertrainer3000.netlify.app/',
+    tags: [
+      'webmidi',
+      'webaudio',
+      'piano',
+      'chord',
+      'practice',
+      'training',
+      'score',
+      'synth',
+    ],
+    description:
+      'Piano practice companion for any USB-MIDI keyboard: live chord detection, notes in treble and bass clef, a scrolling score, recording with loop detection, metronome and built-in synth sounds for headphone practice.',
+  },
 ];
 
 export const allTags = Array.from(
