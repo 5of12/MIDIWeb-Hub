@@ -2,6 +2,14 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'padmap',
+    name: 'PadMap — Drum Kits & Setlists',
+    url: 'https://rhythm-pad-master.lovable.app/',
+    tags: ['drum', 'hardware', 'midi', 'utility', 'setlist'],
+    description:
+      'A browser-based drum kit and setlist manager for the Roland SPD-SX PRO, with MIDI connection controls and backup import.',
+  },
+  {
     id: 'partykeys',
     name: 'PartyKeys AI',
     url: 'https://partykeys.ai/',
