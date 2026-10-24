@@ -638,6 +638,23 @@ export const initialSites: Site[] = [
     description:
       'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
   },
+  {
+    id: 'klaviero',
+    name: 'Klaviero',
+    url: 'https://klaviero.com/',
+    tags: [
+      'piano',
+      'practice',
+      'game',
+      'training',
+      'score',
+      'sheet-music',
+      'webmidi',
+      'webaudio',
+    ],
+    description:
+      'Falling-notes piano game for a MIDI keyboard: 4,296 classical charts graded note by note, a wait mode, 0.25x to 4x, either hand alone, and a sheet music view.',
+  },
 ];
 
 export const allTags = Array.from(
