@@ -2,6 +2,14 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'piano-boss-battles',
+    name: 'Piano Boss Battles',
+    url: 'https://www.pianobossbattles.com/',
+    tags: ['piano', 'practice', 'training', 'sightread', 'webmidi'],
+    description:
+      'Piano lessons, guided practice sessions, and generated Classical-style sight-reading exercises with sheet music and feedback from a connected MIDI keyboard.',
+  },
+  {
     id: 'partykeys',
     name: 'PartyKeys AI',
     url: 'https://partykeys.ai/',
