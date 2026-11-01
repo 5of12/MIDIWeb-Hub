@@ -2,6 +2,24 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'twin-pad-sequencer',
+    name: 'Twin Pad Sequencer',
+    url: 'https://mark-orion.github.io/Twin-Pad-Sequencer/',
+    tags: [
+      'sequencer',
+      'webmidi',
+      'performance',
+      'open-source',
+      'hardware',
+      'novation',
+      'launchpad',
+      'midi',
+      'offline',
+    ],
+    description:
+      'Web based MIDI performance sequencer with support for up to two Novation Launchpads. Offline capable. All in a single HTML file.',
+  },
+  {
     id: 'partykeys',
     name: 'PartyKeys AI',
     url: 'https://partykeys.ai/',
