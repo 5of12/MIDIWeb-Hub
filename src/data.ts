@@ -638,6 +638,14 @@ export const initialSites: Site[] = [
     description:
       'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
   },
+  {
+    id: 'jazzlab',
+    name: 'Jazzlab',
+    url: 'https://samvelkoch.github.io/jazzlab/',
+    tags: ['piano', 'practice', 'training', 'webaudio', 'open-source'],
+    description:
+      'A self-contained jazz, blues and bossa nova piano course: echo, licks, left-hand patterns and whole tunes over a backing band, with scored improvisation and spaced review. Works with the on-screen keyboard or a digital piano over WebMIDI.',
+  },
 ];
 
 export const allTags = Array.from(
