@@ -638,6 +638,14 @@ export const initialSites: Site[] = [
     description:
       'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
   },
+    {
+    id: 'note-after-note',
+    name: 'Note after Note',
+    url: 'https://noteafternote.com/',
+    tags: ['webmidi', 'piano', 'guitar', 'practice', 'training', 'score', 'sight-reading', 'sheet-music'],
+    description:
+      'Free piano and guitar lessons with interactive scores that listen to you: connect a MIDI keyboard (or use the microphone), play along in wait or tempo mode, 1,690 public-domain pieces, theory and ear training, in 13 languages.',
+  },
 ];
 
 export const allTags = Array.from(
