@@ -2,6 +2,13 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+  id: 'minicontrol',
+  name: 'minicontrol',
+  url: 'https://minicontrol.keyandcable.com/',
+  tags: ['synth', 'webaudio', 'minichord', 'midi', 'chord'],
+  description: 'A website which allows a minichord synth to be played through a phone speaker. minichord created by Ben Poilve, minicontrol created by keyandcableco.'
+  }
+  {
     id: 'partykeys',
     name: 'PartyKeys AI',
     url: 'https://partykeys.ai/',
