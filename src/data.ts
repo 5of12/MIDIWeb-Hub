@@ -638,6 +638,22 @@ export const initialSites: Site[] = [
     description:
       'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
   },
+  {
+    id: 'groovesheet-midi-keyboard',
+    name: 'GrooveSheet Virtual MIDI Keyboard',
+    url: 'https://www.groovesheet.net/tools/midi-keyboard',
+    tags: ['webmidi', 'webaudio', 'keyboard', 'piano', 'controller', 'record'],
+    description:
+      'Free browser keyboard for USB MIDI controllers: play piano and 128 General MIDI instruments, recognises popular controllers, loops and saves what you play as a MIDI file.',
+  },
+  {
+    id: 'groovesheet-drum-pads',
+    name: 'GrooveSheet Online Drum Pads',
+    url: 'https://www.groovesheet.net/tools/drum-pads',
+    tags: ['webmidi', 'webaudio', 'drums', 'controller', 'launchpad'],
+    description:
+      'Free 8x8 drum pad grid with 49 drum sounds for a Novation Launchpad, Akai APC mini or any pad controller, with lit pads over MIDI and a one-button looper.',
+  },
 ];
 
 export const allTags = Array.from(
