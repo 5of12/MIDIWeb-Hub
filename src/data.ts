@@ -2,6 +2,14 @@ import { Site } from './types';
 
 export const initialSites: Site[] = [
   {
+    id: 'cue-studio-flx2',
+    name: 'Cue Studio',
+    url: 'https://gabriel-cue-studio.gabriel-downey.chatgpt.site',
+    tags: ['dj', 'training', 'practice', 'controller', 'webmidi', 'webaudio'],
+    description:
+      'DJ practice for the DDJ-FLX2 with live MIDI control feedback, timing drills, and optional button-light guidance.',
+  },
+  {
     id: 'partykeys',
     name: 'PartyKeys AI',
     url: 'https://partykeys.ai/',
