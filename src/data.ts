@@ -638,6 +638,23 @@ export const initialSites: Site[] = [
     description:
       'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
   },
+  {
+    id: 'pianissimo',
+    name: 'Pianissimo',
+    url: 'https://skeithtan.github.io/pianissimo/',
+    tags: [
+      'piano',
+      'training',
+      'practice',
+      'sight-reading',
+      'score',
+      'sheet-music',
+      'webaudio',
+      'webmidi',
+    ],
+    description:
+      'Learn to read piano notation with a MIDI piano: import a MusicXML score, play it on a scrolling staff, and get note hints, looped passages, and corrections after each attempt.',
+  },
 ];
 
 export const allTags = Array.from(
