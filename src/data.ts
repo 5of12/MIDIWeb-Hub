@@ -638,6 +638,22 @@ export const initialSites: Site[] = [
     description:
       'Free, metal-first browser backing band with drums, bass, chord accompaniment, scenes and fills. WebMIDI controller mappings and live MIDI output to compatible software or hardware receivers require a supported browser and MIDI permission.',
   },
+  {
+    id: 'stepwise-piano',
+    name: 'StepWise Piano',
+    url: 'https://stepwisepiano.app/en/',
+    tags: [
+      'piano',
+      'midi',
+      'practice',
+      'training',
+      'sightread',
+      'score',
+      'game',
+    ],
+    description:
+      'StepWise Piano is a free website for learning piano on your own. Connect a MIDI keyboard for real-time note checking as you practice built-in pieces, import your own MusicXML scores, or try generated sight-reading exercises. Without MIDI, you can study music theory, play note-reading and rhythm games, and do ear training and pitch-matching exercises.',
+  },
 ];
 
 export const allTags = Array.from(
